@@ -14,11 +14,16 @@
 
     width: 100vw;
     height: var(--header-height);
+    background-color: rgba(255, 255, 255, 0.75);
     
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+
+    position: fixed;  
+    top: 0;  
+    z-index: 100;
 }
 
 .header img {
@@ -130,36 +135,295 @@
     left: 16px;
   }
   
-  .animated-button:hover .text {
+.animated-button:hover .text {
     transform: translateX(12px);
-  }
+}
   
-  .animated-button:hover svg {
+.animated-button:hover svg {
     fill: #212121;
-  }
+}
   
-  .animated-button:active {
+.animated-button:active {
     scale: 0.95;
     box-shadow: 0 0 0 4px greenyellow;
-  }
+}
   
-  .animated-button:hover .circle {
+.animated-button:hover .circle {
     width: 220px;
     height: 220px;
     opacity: 1;
-  }
+}
   
 
-  .adress-title {
+.adress-title {
     font-style: italic;
     font-size: 36px;
-  }
+}
 
 
-  .block-1-description {
+/* block-1 */
+.block-1-description {
     font-size: 24px;
     font-weight: 400;
     font-family: var(--font-family);
     font-style: italic;
     color: rgb(245, 245, 245) !important;
 }
+
+.block-1-title {
+    width: 40vw;
+    height: 35vh;
+}
+
+
+.block-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5vw;
+}
+
+@media (max-width: 750px) {
+    .block-1 {
+        flex-flow: column nowrap;
+    }
+}
+
+/* From Uiverse.io by micaelgomestavares */ 
+.form {
+    width: 30vw;
+    height: 50vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+    background-color: #ffffffb6;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+  
+.title {
+    font-size: 32px;
+    color: royalblue;
+    font-weight: 600;
+    font-family: var(--font-family);
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+  
+.title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: royalblue;
+}
+  
+.title::before {
+    width: 18px;
+    height: 18px;
+    background-color: royalblue;
+}
+  
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+  
+.message, .signin {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--font-family);
+    font-style: italic;
+}
+  
+.signin {
+    text-align: center;
+}
+  
+.signin a {
+    color: royalblue;
+}
+  
+.signin a:hover {
+    text-decoration: underline royalblue;
+}
+  
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+  
+.form label {
+    position: relative;
+    width: 100%;
+}
+  
+.form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+}
+  
+.form label .input:focus + span,.form label .input:valid + span {
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+  
+.form label .input:valid + span {
+    color: green;
+}
+  
+.submit {
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: .5rem;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+
+    width: 100%;
+    height: 2.5rem;
+}
+  
+.submit:hover {
+    background-color: rgb(56, 90, 194);
+    cursor: pointer;
+}
+  
+@keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+}
+
+.form-phone-button {
+    width: 100%;
+    height: 2.5rem;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: .5rem;
+    border-radius: 10px;
+    transform: .3s ease;
+    color: black;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form-phone-button svg {
+    fill: black;
+    width: 24px;
+    height: 24px;
+}
+
+.form-phone-button:hover {
+    background-color: rgba(56, 91, 194, 0.521);
+}
+
+
+.form-button-animation {
+    transition: transform ease-in .5s;
+}
+
+.form-button-animation:hover {
+    transform: translateY(-5px);
+    transition: transform ease-out .25s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    cursor: pointer;
+}
+
+
+.telegram {
+    transition: none 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    height: 3rem;
+    gap: 10px;
+    border: none;
+    background-color: rgb(42 171 238);
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .telegram-text {
+    transition: none 0.3s ease;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .telegram:hover {
+    justify-content: flex-start;
+  }
+  
+  .telegram:hover .telegram-text {
+    display: none;
+    position: absolute;
+  }
+  
+  .telegram-svg {
+    width: 23px;
+    height: 23px;
+    transition: 0.8s;
+  }
+  
+  .telegram:hover .telegram-svg {
+    margin-left: 45%;
+    display: block;
+    transform: rotate(50deg);
+  }
+  
