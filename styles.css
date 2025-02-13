@@ -5,6 +5,11 @@
 :root {
     --header-height: 10vh;
     --font-family: "Noto Sans", serif;
+    --timberwolf: #CEC2B8ff;
+    --auburn: #A42F36ff;
+    --umber: #6E594Bff;
+    --chamoisee: #9E7D63ff;
+    --champagne-pink: #E7DAD0ff;
 }
 
 
@@ -30,6 +35,7 @@
     height: 65%;
     width: auto;
     padding-left: 5%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .header p {
@@ -57,102 +63,98 @@
 }
 
 
+.block-title-container {
+    padding-top: 10vh;
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.block-title-container .maintitle {
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 700;
+    font-family: var(--font-family);
+    padding-bottom: .5rem;
+}
+
+.block-title-container .subtitle {
+    font-size: 1rem;
+    color: rgb(85, 85, 85);
+    font-weight: 400;
+    font-family: var(--font-family);
+    padding-bottom: .5rem;
+}
+
+
 .button-container {
     padding-right: 5%;
 }
 
-/* From Uiverse.io by gharsh11032000 */ 
-.animated-button {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    /* padding: 16px 36px; */
-    --header-button-height: calc(var(--header-height) / 5);
-    padding: var(--header-button-height) calc(var(--header-button-height) * 2);
-    border: 4px solid;
-    border-color: transparent;
-    font-size: 1.5vw;
-    background-color: inherit;
-    border-radius: 100px;
-    font-weight: 600;
+/* From Uiverse.io by joe-watson-sbf */ 
+.btn {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    border: 1px solid #000;
+    border-color: black;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 1em 1.5em;
+    color: #000000;
+    text-transform: uppercase;
     font-family: var(--font-family);
-    color: rgb(0, 0, 0);
-    box-shadow: 0 0 0 2px rgb(63, 63, 63);
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  
-  .animated-button svg {
-    position: absolute;
-    /* width: 24px; */
-    width: 2vw;
-    fill: rgb(0, 0, 0);
-    z-index: 9;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  
-  .animated-button .arr-1 {
-    right: 16px;
-  }
-  
-  .animated-button .arr-2 {
-    left: -25%;
-  }
-  
-  .animated-button .circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    background-color: rgba(172, 255, 47, 0.466);
-    border-radius: 50%;
-    opacity: 0;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  
-  .animated-button .text {
+    font-weight: 500;
     position: relative;
-    z-index: 1;
-    transform: translateX(-12px);
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: 0.5s ease;
+    cursor: pointer;
   }
   
-  .animated-button:hover {
-    box-shadow: 0 0 0 12px transparent;
-    color: #212121;
-    border-radius: 12px;
-  }
-  
-  .animated-button:hover .arr-1 {
-    right: -25%;
-  }
-  
-  .animated-button:hover .arr-2 {
-    left: 16px;
-  }
-  
-.animated-button:hover .text {
-    transform: translateX(12px);
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s ease;
 }
   
-.animated-button:hover svg {
-    fill: #212121;
+.btn:hover {
+    color: #ffffff;
+    transition-delay: 0.5s;
 }
   
-.animated-button:active {
-    scale: 0.95;
-    box-shadow: 0 0 0 4px greenyellow;
+.btn:hover::before {
+    background-color: var(--chamoisee);
+    animation: expandWidth .5s ease;
+}
+
+@keyframes expandWidth {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
 }
   
-.animated-button:hover .circle {
-    width: 220px;
-    height: 220px;
-    opacity: 1;
+.btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: var(--chamoisee);
+    transition: 0.4s ease;
+    z-index: -1;
 }
+  
+.btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: var(--auburn);
+}  
   
 
 .adress-title {
@@ -193,13 +195,13 @@
 /* From Uiverse.io by micaelgomestavares */ 
 .form {
     width: 30vw;
-    height: 50vh;
+    height: auto;
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 5%;
+    gap: 1rem;
     background-color: #ffffffb6;
     padding: 20px;
     border-radius: 20px;
@@ -309,22 +311,17 @@
 .submit {
     border: none;
     outline: none;
-    background-color: royalblue;
+    background-color: var(--auburn);
     padding: .5rem;
     border-radius: 10px;
     color: #fff;
-    font-size: 16px;
-    transform: .3s ease;
+    font-size: 24px;
 
     width: 100%;
-    height: 2.5rem;
+    height: 4rem;
 }
-  
-.submit:hover {
-    background-color: rgb(56, 90, 194);
-    cursor: pointer;
-}
-  
+
+
 @keyframes pulse {
     from {
       transform: scale(0.9);
@@ -337,7 +334,7 @@
     }
 }
 
-.form-phone-button {
+/* .form-phone-button {
     width: 100%;
     height: 2.5rem;
 
@@ -346,7 +343,7 @@
     border-radius: 10px;
     transform: .3s ease;
     color: black;
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 
     display: flex;
@@ -367,11 +364,12 @@
 
 .form-phone-button:hover {
     background-color: rgba(56, 91, 194, 0.521);
-}
+} */
 
 
 .form-button-animation {
-    transition: transform ease-in .5s;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform ease-in .25s;
 }
 
 .form-button-animation:hover {
@@ -382,6 +380,70 @@
 }
 
 
+.button {
+    width: 90%;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: var(--timberwolf);
+    border-radius: 10px;
+    border: 3px solid #ffffff4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--umber);
+    gap: 10px;
+    font-weight: bold;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+    fill: var(--umber);
+  }
+  
+  .button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+  
+
+
 .telegram {
     transition: none 0.5s ease;
     display: flex;
@@ -390,13 +452,14 @@
     position: relative;
     padding-left: 10px;
     padding-right: 10px;
-    width: 100%;
+    width: 90%;
     height: 3rem;
     gap: 10px;
-    border: none;
-    background-color: rgb(42 171 238);
-    color: white;
-    border-radius: 15px;
+    /* background-color: rgb(42 171 238); */
+    background-color: var(--timberwolf);
+    border: 3px solid #ffffff4d;
+    color: var(--umber);
+    border-radius: 10px;
     cursor: pointer;
   }
   
@@ -419,6 +482,7 @@
     width: 23px;
     height: 23px;
     transition: 0.8s;
+    fill: var(--umber);
   }
   
   .telegram:hover .telegram-svg {
@@ -430,7 +494,7 @@
 
 .rooms-container {
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     
     display: flex;
     justify-content: center;
@@ -542,4 +606,46 @@
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
+}
+
+.room-description {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-self: flex-start;
+    align-items: center;
+}
+
+/* PopUp */
+.popup {
+    display: none; /* Скрываем popup по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+}
+
+.close:hover {
+    color: #f00;
 }

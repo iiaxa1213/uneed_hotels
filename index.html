@@ -60,36 +60,33 @@
 
 <body class="th1">
 
-    <header class="header">
-        <img src="logo.webp">
-        <p>
-            Uneed Вокзал
-        </p>
-        <div class="button-container">
-            <button class="animated-button">
-                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-                  ></path>
-                </svg>
-                <span class="text">Забронювати</span>
-                <span class="circle"></span>
-                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-                  ></path>
-                </svg>
-            </button>
-        </div>
-    </header>
+   <header class="header">
+      <img src="logo.webp">
+      <p>
+         Uneed Вокзал
+      </p>
+      <div class="button-container">
+         <button onclick="openPopUp()" class="btn">Забронювати</button>
+      </div>
+   </header>
 
-    <section id="n-fd24f4e4-940f-4eeb-8351-13fd92148adb" class="cli-block cli-header cli-block--inverse">
-        <div
-            id="n-8e72eb7b-4e71-43e6-8a56-a97f7ffc5331"
-            class="cli-background"
-            style="--background-color: rgb(255, 255, 255);--background-image: none;"
-        ></div>
-     </section>
+
+   <!-- PopUp -->
+   <div id="popup" class="popup">
+      <div class="popup-content">
+         <span id="closePopup" class="close">&times;</span>
+         <p>Это полноэкранный popup!</p>
+      </div>
+   </div>
+
+
+   <section id="n-fd24f4e4-940f-4eeb-8351-13fd92148adb" class="cli-block cli-header cli-block--inverse">
+      <div
+         id="n-8e72eb7b-4e71-43e6-8a56-a97f7ffc5331"
+         class="cli-background"
+         style="--background-color: rgb(255, 255, 255);--background-image: none;"
+      ></div>
+   </section>
 
      <section id="n-1015e1ca-3bb3-489d-bd38-d6a8eff60ada" class="cli-block cli-cover cli-block--inverse">
         <div
@@ -114,16 +111,16 @@
             <div class="block-1-form-container">
                 <!-- From Uiverse.io by micaelgomestavares --> 
                     <form class="form">
-                        <p class="title">Бронювання</p>
+                        <!-- <p class="title">Бронювання</p>
                         <p class="message">Введіть ваш телефон і бронюйте зараз!</p>
                         <label>
                             <input class="input" type="email" placeholder="" required="">
                             <span>Ваш телефон:*</span>
-                        </label> 
+                        </label>  -->
                         <button class="submit form-button-animation">Забронювати</button>
                         
                         <!-- <a class="form-phone-button" href="tel:+380734977346"> -->
-                        <div class="form-phone-button form-button-animation">
+                        <!-- <div class="form-phone-button form-button-animation">
                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                               viewBox="0 0 511.988 511.988" style="enable-background:new 0 0 511.988 511.988;" xml:space="preserve">
                               <g>
@@ -142,14 +139,19 @@
                                  </g>
                               </g>
                            </svg>
+
                            <a href="https://google.com/" type="button">
                               +38 (073) 497 73 46
                            </a>
-                        </div>
+                        </div> -->
+                        <button class="button form-button-animation">
+                           <!-- <svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" -->
+                              <svg class="icon" height="0px" width="0px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 181.352 181.352" xml:space="preserve"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g> <g> <g> <g> <path d="M169.393,167.37l-14.919,9.848c-9.604,6.614-50.531,14.049-106.211-53.404 C-5.415,58.873,9.934,22.86,17.134,14.555L29.523,1.678c2.921-2.491,7.328-2.198,9.839,0.811l32.583,38.543l0.02,0.02 c2.384,2.824,2.306,7.22-0.83,9.868v0.029l-14.44,10.415c-5.716,5.667-0.733,14.587,5.11,23.204l27.786,32.808 c12.926,12.477,20.009,18.241,26.194,14.118l12.008-13.395c2.941-2.472,7.328-2.169,9.839,0.821l32.603,38.543v0.02 C172.607,160.316,172.519,164.703,169.393,167.37z"></path> </g> </g> </g> </g></svg>
+                           +38 (073) 497 73 46
+                         </button>
                         
                         <button class="telegram form-button-animation">
                            <svg
-                             style="fill:#FFFFFF;"
                              class="telegram-svg"
                              viewBox="0,0,256,256"
                              y="0px"
@@ -170,7 +172,6 @@
                                stroke-width="1"
                                stroke="none"
                                fill-rule="nonzero"
-                               fill="#ffffff"
                              >
                                <g transform="scale(5.12,5.12)">
                                  <path
@@ -193,84 +194,98 @@
      <!-- BLOCK-1 END -->
 
      <!-- BLOCK-2 START -->
-     <div class="rooms-container">
-         <div class="room" roomIndex=0>
-            <div class="slideshow-container" >
-               <div class="mySlides fade">
-               <div class="numbertext">1 / 3</div>
-               <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
-               <div class="text">Caption Text</div>
+      <div class="block-title-container">
+         <div class="maintitle">Кращi кiмнати подобово</div>
+         <div class="subtitle">Підберіть потрібну квартиру за вашими параметрами</div>
+      </div>
+      
+      <div class="rooms-container">
+            <div class="room" roomIndex=0>
+               <div class="slideshow-container" >
+                  <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
+                  <!-- <div class="text">Caption Text</div> -->
+                  </div>
+                  
+                  <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
+                  <!-- <div class="text">Caption Two</div> -->
+                  </div>
+                  
+                  <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
+                  <!-- <div class="text">Caption Three</div> -->
+                  </div>
+                  
+                  <div class="mySlides fade">
+                  <div class="numbertext">4 / 4</div>
+                  <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
+                  <!-- <div class="text">Caption Three</div> -->
+                  </div>
+                  
+                  <a class="prev" onclick="prevSlide(this)">❮</a>
+                  <a class="next" onclick="nextSlide(this)">❯</a>
                </div>
                
-               <div class="mySlides fade">
-               <div class="numbertext">2 / 3</div>
-               <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
-               <div class="text">Caption Two</div>
+               <div style="text-align:center">
+                  <span class="dot" onclick="setSlide(this, 1)"></span> 
+                  <span class="dot" onclick="setSlide(this, 2)"></span> 
+                  <span class="dot" onclick="setSlide(this, 3)"></span>
+                  <span class="dot" onclick="setSlide(this, 4)"></span> 
                </div>
-               
-               <div class="mySlides fade">
-               <div class="numbertext">3 / 3</div>
-               <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
-               <div class="text">Caption Three</div>
-               </div>
-               
-               <div class="mySlides fade">
-               <div class="numbertext">4 / 4</div>
-               <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
-               <div class="text">Caption Three</div>
-               </div>
-               
-               <a class="prev" onclick="prevSlide(this)">❮</a>
-               <a class="next" onclick="nextSlide(this)">❯</a>
-            </div>
-            
-            <div style="text-align:center">
-               <span class="dot" onclick="setSlide(this, 1)"></span> 
-               <span class="dot" onclick="setSlide(this, 2)"></span> 
-               <span class="dot" onclick="setSlide(this, 3)"></span>
-               <span class="dot" onclick="setSlide(this, 4)"></span> 
-            </div>
-         </div>
 
-         <div class="room" roomIndex=1>
-            <div class="slideshow-container" >
-               <div class="mySlides fade">
-               <div class="numbertext">1 / 3</div>
-               <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
-               <div class="text">Caption Text</div>
+               <div class="room-description">
+                  <div id="n-fc54ebab-241d-4aa2-9186-f9a7a4a67e92" data-root-id="0540ff7d-2223-4c30-9991-ac09f3de7eff" class="cli-goods-card__caption cli-text-medium" data-type="text" data-title="Подпись" data-draggable="true" data-design-type="text" data-product-description="">м. Новые Черемушки</div>
+                  <div id="n-163dddbf-e681-4619-a476-0368c63f1cad" data-root-id="0540ff7d-2223-4c30-9991-ac09f3de7eff" class="cli-goods-card__current-price cli-text-bold" data-type="text" data-title="Цена" data-draggable="true" data-design-type="text" data-product-price="">2 000 ₽ / сутки</div>
+
+                  <div class="room-icons">
+
+                  </div>
                </div>
-               
-               <div class="mySlides fade">
-               <div class="numbertext">2 / 3</div>
-               <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
-               <div class="text">Caption Two</div>
-               </div>
-               
-               <div class="mySlides fade">
-               <div class="numbertext">3 / 3</div>
-               <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
-               <div class="text">Caption Three</div>
-               </div>
-               
-               <div class="mySlides fade">
-               <div class="numbertext">4 / 4</div>
-               <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
-               <div class="text">Caption Three</div>
-               </div>
-               
-               <a class="prev" onclick="prevSlide(this)">❮</a>
-               <a class="next" onclick="nextSlide(this)">❯</a>
+
             </div>
-            
-            <div style="text-align:center">
-               <span class="dot" onclick="setSlide(this, 1)"></span> 
-               <span class="dot" onclick="setSlide(this, 2)"></span> 
-               <span class="dot" onclick="setSlide(this, 3)"></span>
-               <span class="dot" onclick="setSlide(this, 4)"></span> 
+
+            <div class="room" roomIndex=1>
+               <div class="slideshow-container" >
+                  <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
+                  <!-- <div class="text">Caption Text</div> -->
+                  </div>
+                  
+                  <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
+                  <!-- <div class="text">Caption Two</div> -->
+                  </div>
+                  
+                  <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
+                  <!-- <div class="text">Caption Three</div> -->
+                  </div>
+                  
+                  <div class="mySlides fade">
+                  <div class="numbertext">4 / 4</div>
+                  <img src="5a39cd4e8deae68ae10f8e53f19038f8.webp">
+                  <!-- <div class="text">Caption Three</div> -->
+                  </div>
+                  
+                  <a class="prev" onclick="prevSlide(this)">❮</a>
+                  <a class="next" onclick="nextSlide(this)">❯</a>
+               </div>
+               
+               <div style="text-align:center">
+                  <span class="dot" onclick="setSlide(this, 1)"></span> 
+                  <span class="dot" onclick="setSlide(this, 2)"></span> 
+                  <span class="dot" onclick="setSlide(this, 3)"></span>
+                  <span class="dot" onclick="setSlide(this, 4)"></span> 
+               </div>
             </div>
-         </div>
-         
-   </div>
+      </div>
 
    
 
@@ -824,4 +839,35 @@
       dots[slideIndex-1].className += " active";
       room.setAttribute("slideIndex", slideIndex);
    }
+</script>
+
+<script>
+   // Popup script
+   function openPopUp() {
+      const popup = document.getElementById('popup');
+      popup.style.display = 'flex';
+   }
+
+   document.addEventListener('DOMContentLoaded', function() {
+      const popup = document.getElementById('popup');
+      const openPopupButton = document.getElementById('openPopup');
+      const closePopupButton = document.getElementById('closePopup');
+  
+      // Открытие popup
+      openPopupButton.addEventListener('click', function() {
+          popup.style.display = 'flex';
+      });
+  
+      // Закрытие popup
+      closePopupButton.addEventListener('click', function() {
+          popup.style.display = 'none';
+      });
+  
+      // Закрытие popup при клике вне его области
+      window.addEventListener('click', function(event) {
+          if (event.target === popup) {
+              popup.style.display = 'none';
+          }
+      });
+  });
 </script>
