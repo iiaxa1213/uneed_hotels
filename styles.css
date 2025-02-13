@@ -499,9 +499,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
 
     gap: 10%;
+}
+
+.room-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+@media (max-width: 750px) {
+    .room-container {
+        flex-flow: column nowrap;
+        gap: 2rem;
+    }
+
+    .room-description {
+        width: 50vw;
+    }
 }
 
 .room {
@@ -509,13 +528,53 @@
     flex-flow: column nowrap;
     gap: 1rem;
 
-    /* width: 30vw; */
+    width: max(30vw, 300px);
     /* width: clamp(200px, 30vw, 500px); */
-    width: 300px;
-    /* height: 50vh; */
     height: auto;
     
 }
+
+.room-description {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-self: flex-start;
+    align-items: center;
+
+    width: 15vw;
+}
+
+.room-description-icons-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-self: center;
+    align-items: center;
+}
+
+.room-icon-container {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: .25rem;
+}
+
+.room-icon {
+    /* width: 2vw; */
+    width: 2rem;
+    height: auto;
+    fill: black;
+}
+
+.room-icon-text {
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-weight: 300;
+}
+
 
   /* Slideshow container */
 .slideshow-container {
@@ -608,12 +667,6 @@
     .prev, .next,.text {font-size: 11px}
 }
 
-.room-description {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-self: flex-start;
-    align-items: center;
-}
 
 /* PopUp */
 .popup {
