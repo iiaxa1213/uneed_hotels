@@ -501,7 +501,7 @@
     align-items: center;
     flex-flow: column nowrap;
 
-    gap: 10%;
+    gap: 5rem;
 }
 
 .room-container {
@@ -510,6 +510,7 @@
     justify-content: center;
     align-items: flex-start;
     gap: 3rem;
+    padding-bottom: 5rem;
 }
 
 @media (max-width: 750px) {
@@ -732,4 +733,68 @@
 
 .close:hover {
     color: #f00;
+}
+
+
+/* ABOUT US */
+.about {
+    position: relative;
+    width: 100vw;
+    min-height: 70vh;
+    
+    background-image: url(920605bd5066bfec3ef4eaf2668e214f-5.webp);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    pointer-events: none;
+}
+
+.about-content {
+    width: 80%;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 10vh 0;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5vh;
+}
+
+
+.about-text-1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #d1d1d1;
+}
+
+.about-text-2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+
+.about-text-3 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #E6E5DC;
 }
