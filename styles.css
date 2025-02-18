@@ -12,12 +12,17 @@
     --champagne-pink: #E7DAD0ff;
 }
 
+body {
+    min-width: 100vw;
+}
 
 .header {
     margin: 0px;
     padding: 0px;
 
-    width: 100vw;
+    /* width: 100vw; */
+    width: 100%;
+    overflow: hidden;
     height: var(--header-height);
     background-color: rgba(255, 255, 255, 0.75);
     
@@ -928,4 +933,53 @@
 
 .map-shadow {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.cli-block {
+    max-width: 100vw !important;
+}
+
+
+/* Footer */
+.footer {
+    max-width: 80vw;
+    height: auto;
+    min-height: 30vh;
+
+    background-color: #000;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-column {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    max-width: 25vw;
+
+    color: white;
+    font-family: var(--font-family);
+}
+
+.footer-logo {
+    width: 25vw;
+    height: auto;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-icon svg {
+    width: 36px;
+    height: 36px;
+    fill: white;
 }
