@@ -22,7 +22,7 @@
     background-color: var(--umber);
 }
 .background-container-2 {
-    background-color: var(--chamoisee);
+    background-color: var(--champagne-pink);
 }
 
 
@@ -85,9 +85,9 @@
 
 
 .block-title-container {
-    padding-top: 10vh;
+    padding-top: 5vh;
     text-align: center;
-    padding-bottom: 5rem;
+    /* padding-bottom: 5rem; */
 }
 
 .block-title-container .maintitle {
@@ -198,13 +198,14 @@
     height: 35vh;
 }
 
-
 .block-1 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
     gap: 5vw;
+
+    height: calc(100vh - var(--header-height));
 }
 
 @media (max-width: 750px) {
@@ -840,7 +841,7 @@
     align-items: center;
     gap: 3rem;
 
-    padding: 6rem 0;
+    padding: 6rem 3rem;
 }
 
 .comment {
@@ -1002,4 +1003,18 @@
     width: 36px;
     height: 36px;
     fill: white;
+}
+
+
+/* Overwrite */
+.cli-iconed-card__icon svg {
+    fill: var(--auburn) !important;
+}
+
+
+/* Extra */
+.white-space {
+    background-color: white;
+    height: var(--header-height);
+    width: 100%;
 }
