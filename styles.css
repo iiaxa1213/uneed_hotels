@@ -10,26 +10,42 @@
     --umber: #6E594Bff;
     --chamoisee: #9E7D63ff;
     --champagne-pink: #E7DAD0ff;
+    -webkit-box-sizing:content-box !important;
+    box-sizing: content-box !important;
 }
 
-body {
-    min-width: 100vw;
+/* * {
+    outline: 1px solid red !important;
+} */
+
+.background-container-1 {
+    background-color: var(--umber);
+}
+.background-container-2 {
+    background-color: var(--chamoisee);
+}
+
+
+/* Header */
+.header-container {
+    max-width: 100vw;
 }
 
 .header {
-    margin: 0px;
-    padding: 0px;
+    /* margin: 0px;
+    padding: 0px; */
 
-    /* width: 100vw; */
-    width: 100%;
-    overflow: hidden;
+    width: 100vw;
+    /* width: 100%; */
+    overflow: auto;
     height: var(--header-height);
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.85);
     
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    padding: 0 3rem;
 
     position: fixed;  
     top: 0;  
@@ -39,12 +55,12 @@ body {
 .header img {
     height: 65%;
     width: auto;
-    padding-left: 5%;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    /* background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
 }
 
 .header p {
-    font-size: calc(var(--header-height) / 2);
+    font-size: calc(var(--header-height) / 2.5);
     font-weight: 700;
     font-family: var(--font-family);
 }
@@ -92,7 +108,7 @@ body {
 
 
 .button-container {
-    padding-right: 5%;
+    margin-right: 5%;
 }
 
 /* From Uiverse.io by joe-watson-sbf */ 
@@ -498,7 +514,9 @@ body {
   
 
 .rooms-container {
-    width: 100vw;
+    width: 100%;
+    /* width: 100vw;
+    max-width: 100vw; */
     /* height: 100vh; */
     
     display: flex;
@@ -744,7 +762,7 @@ body {
 /* ABOUT US */
 .about {
     position: relative;
-    width: 100vw;
+    max-width: 100vw;
     min-height: 80vh;
     
     background-image: url(920605bd5066bfec3ef4eaf2668e214f-5.webp);
@@ -827,7 +845,7 @@ body {
 
 .comment {
     position: relative;
-    background-color: #30344c;
+    background-color: var(--chamoisee);
     padding: 1em;
     z-index: 5;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
@@ -846,7 +864,8 @@ body {
 }
   
 .comment-username {
-    color: #c6e1ed;
+    /* color: #c6e1ed; */
+    color: var(--champagne-pink);
     font-size: 0.85em;
     font-weight: 600;
 }
@@ -869,7 +888,7 @@ body {
 
 /* Map */
 .map-container {
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     flex-flow: row wrap;
@@ -877,7 +896,7 @@ body {
     align-items: center;
     gap: 3rem;
 
-    padding: 5rem 2rem;
+    padding: 5rem 0;
 }
 
 .map-title {
@@ -935,30 +954,29 @@ body {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-.cli-block {
-    max-width: 100vw !important;
-}
-
 
 /* Footer */
 .footer {
-    max-width: 80vw;
+    /* max-width: 80vw; */
     height: auto;
     min-height: 30vh;
+    width: 100%;
 
     background-color: #000;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+
+    padding: 0 3rem;
 }
 
 .footer-column {
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     max-width: 25vw;
 
     color: white;
@@ -968,6 +986,8 @@ body {
 .footer-logo {
     width: 25vw;
     height: auto;
+    /* background-color: rgb(255, 255, 255); */
+    filter: invert(100%);
 }
 
 .footer-contacts {
