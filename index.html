@@ -71,25 +71,10 @@
          </div>
       </div>
    </header>
-
-
-   <!-- PopUp -->
-   <div id="popup" class="popup">
-      <div class="popup-content">
-         <span id="closePopup" class="close">&times;</span>
-         <p>Это полноэкранный popup!</p>
-      </div>
-   </div>
-
-
-   <!-- <section class="cli-block cli-header cli-block--inverse">
-      <div
-         class="cli-background"
-         style="--background-color: rgb(255, 255, 255);--background-image: none;"
-      ></div>
-   </section> -->
    
+
    <div class="white-space"></div>
+
 
      <section class="cli-block cli-cover cli-block--inverse">
         <div
@@ -111,14 +96,14 @@
 
             <div class="block-1-form-container">
                 <!-- From Uiverse.io by micaelgomestavares --> 
-                    <form class="form">
+                    <div class="form">
                         <!-- <p class="title">Бронювання</p>
                         <p class="message">Введіть ваш телефон і бронюйте зараз!</p>
                         <label>
                             <input class="input" type="email" placeholder="" required="">
                             <span>Ваш телефон:*</span>
                         </label>  -->
-                        <button class="submit form-button-animation">Забронювати</button>
+                        <button onclick="openPopUp()" class="submit form-button-animation">Забронювати</button>
                         
                         <!-- <a class="form-phone-button" href="tel:+380734977346"> -->
                         <!-- <div class="form-phone-button form-button-animation">
@@ -184,7 +169,7 @@
                            <span class="telegram-text">Ми у Telegram</span>
                          </button>
                         
-                        </form>
+                        </div>
             </div>
             
                 <div id="n-38e24914-f9fb-47be-bf5c-04944409de88" data-root-id="1015e1ca-3bb3-489d-bd38-d6a8eff60ada" class="cli-background" style="--background-color: rgba(0, 0, 0, 0);--background-image: url(&quot;300fbb86cdb282207049e72581b7f88c-5.webp&quot;);; --bg-666: url(&quot;300fbb86cdb282207049e72581b7f88c.webp&quot;);--bg-767: url(&quot;300fbb86cdb282207049e72581b7f88c-1.webp&quot;);--bg-1023: url(&quot;300fbb86cdb282207049e72581b7f88c-2.webp&quot;);--bg-1199: url(&quot;300fbb86cdb282207049e72581b7f88c-3.webp&quot;);--bg-1920: url(&quot;300fbb86cdb282207049e72581b7f88c-4.webp&quot;);" data-fill="true" data-type="background" data-image="true" data-video="true" data-design-type="background" data-system-sizes="666,666px,821px,cover;767,767px,801px,cover;1023,1023px,752px,cover;1199,1199px,752px,cover;1920,1920px,705px,cover" data-system-bg-url="https://274418.selcdn.ru/cv08300-33250f0d-0664-43fc-9dbf-9d89738d114e/images/13/300fbb86cdb282207049e72581b7f88c.webp" data-system-bg-sizes="666,1232,821;767,1202,801;1023,1128,752;1199,1199,752;1920,1920,705;">
@@ -312,7 +297,7 @@
 
                </div>
 
-               <button class="submit form-button-animation">Забронювати</button>
+               <button onclick="openPopUp()" class="submit form-button-animation">Забронювати</button>
             </div>
          </div>
 
@@ -421,7 +406,7 @@
 
                </div>
 
-               <button class="submit form-button-animation">Забронювати</button>
+               <button onclick="openPopUp()" class="submit form-button-animation">Забронювати</button>
             </div>
          </div>
 
@@ -659,32 +644,13 @@
 <script>
    // Popup script
    function openPopUp() {
-      const popup = document.getElementById('popup');
-      popup.style.display = 'flex';
+      var binotelButton = document.getElementById('bingc-phone-button'); // Ищем кнопку по ID
+      if (binotelButton) {
+        binotelButton.click();
+      } else {
+        console.error("Binotel button not found");
+      }
    }
-
-   document.addEventListener('DOMContentLoaded', function() {
-      const popup = document.getElementById('popup');
-      const openPopupButton = document.getElementById('openPopup');
-      const closePopupButton = document.getElementById('closePopup');
-  
-      // Открытие popup
-      openPopupButton.addEventListener('click', function() {
-          popup.style.display = 'flex';
-      });
-  
-      // Закрытие popup
-      closePopupButton.addEventListener('click', function() {
-          popup.style.display = 'none';
-      });
-  
-      // Закрытие popup при клике вне его области
-      window.addEventListener('click', function(event) {
-          if (event.target === popup) {
-              popup.style.display = 'none';
-          }
-      });
-  });
 </script>
 
 
