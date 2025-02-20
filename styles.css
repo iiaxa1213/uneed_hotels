@@ -176,47 +176,88 @@
     transition-delay: 0.4s;
     color: var(--auburn);
 }  
-  
-
-.adress-title {
-    font-style: italic;
-    font-size: 36px;
-}
 
 
 /* block-1 */
+.adress-title {
+    font-family: var(--font-family);
+    font-size: .75em;
+    font-style: italic;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+.block-1-title-company {
+    font-family: var(--font-family);
+    font-size: max(3vw, 3rem);
+    /* font-size: clamp(1em, 2.9em, 3em); */
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+
+.block-1-title-adress {
+    font-family: var(--font-family);
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 600;
+    color: white;
+}
+
 .block-1-description {
     font-size: 24px;
     font-weight: 400;
     font-family: var(--font-family);
     font-style: italic;
     color: rgb(245, 245, 245) !important;
+    text-align: center;
 }
 
 .block-1-title {
     width: 40vw;
     height: 35vh;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 750px) { 
+    .block-1-title {
+        width: 90vw;
+    }
 }
 
 .block-1 {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 5vw;
+    gap: 10vw;
 
     height: calc(100vh - var(--header-height));
+}
+
+@media (max-width: 1250px) {
+    .block-1 {
+        justify-content: space-around;
+    }
 }
 
 @media (max-width: 750px) {
     .block-1 {
         flex-flow: column nowrap;
+        gap: 5vh;
+        padding-top: calc(var(--header-height) / 2);
     }
 }
 
 /* From Uiverse.io by micaelgomestavares */ 
 .form {
-    width: 30vw;
+    width: max(300px, 30vw);
     height: auto;
 
     display: flex;
@@ -230,6 +271,12 @@
     position: relative;
 
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+@media (max-width: 750px) {
+    .form {
+        width: max(300px, 50vw);
+    }
 }
   
 .title {
