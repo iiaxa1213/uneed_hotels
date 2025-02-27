@@ -614,7 +614,8 @@
     flex-flow: column nowrap;
     gap: 1rem;
 
-    width: max(40vw, 300px);
+    width: max(50vw, 300px);
+    /* width: max(40vw, 300px); */
     /* width: clamp(200px, 30vw, 500px); */
     height: auto;
     
