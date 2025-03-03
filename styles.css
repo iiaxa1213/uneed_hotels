@@ -972,7 +972,7 @@
     align-items: center;
     gap: 3rem;
 
-    padding: 3rem 3rem;
+    padding: 2rem 3rem 6rem 2rem;
 }
 
 .map-title {
@@ -1040,11 +1040,11 @@
 
     background-color: #000;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    flex-flow: row nowrap;
+    justify-content: space-around;
     align-items: center;
 
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
 }
 
 .footer-column {
@@ -1053,14 +1053,16 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
+    width: clamp(250px, 30vw, 35vw);
     /* max-width: 35vw; */
 
     color: white;
     font-family: var(--font-family);
+    text-align: center;
 }
 
 .footer-column-1 {
-    max-width: 35vw;
+    /* max-width: 35vw; */
 }
 
 .footer-columt-1-text {
@@ -1076,14 +1078,14 @@
 
 .footer-column-2 {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
     gap: 3rem;
 }
 
 .footer-phone {
-    color: rgb(156, 165, 255);
+    color: #FFC55C;
     font-size: 1rem;
     font-weight: 500;
 }
