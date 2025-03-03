@@ -9,6 +9,9 @@
       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
       <link rel="icon" href="favicon.ico" type="image/x-icon">
       
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      
       <!-- ld+json start -->
       <script type="application/ld+json">
          {
@@ -121,7 +124,7 @@
         <link rel="stylesheet" href="d-simple-styles.css">
         <link rel="stylesheet" href="e-complex-styles.css">
         <link rel="stylesheet" href="f-blocks-styles.css">
-        <link rel="stylesheet" href="g-libraries-styles.css">
+        <!-- <link rel="stylesheet" href="g-libraries-styles.css"> -->
         <link rel="stylesheet" href="fd24f4e4-940f-4eeb-8351-13fd92148adb.css">
         <link rel="stylesheet" href="1015e1ca-3bb3-489d-bd38-d6a8eff60ada.css">
         <link rel="stylesheet" href="0540ff7d-2223-4c30-9991-ac09f3de7eff.css">
@@ -642,41 +645,46 @@
       <section class="cli-block cli-block--default background-container-1">
          <p class="comment-title">Відгуки наших клієнтів</p>
          
-         <div class="comments">
+         <div class="comments swiper">
+            <div class="swiper-wrapper">
+               <div class="comment swiper-slide">
+                  <p class="comment-text">Добрий день, дуже задоволені. Увага, турбота, чистота. На 💯 балів.
+                  </p>
+                  <p class="comment-username">Lena</p>
+                  <p class="comment-date">Грудень, 2021</p>
+               </div>
 
-            <div class="comment">
-               <p class="comment-text">Добрий день, дуже задоволені. Увага, турбота, чистота. На 💯 балів.
-               </p>
-               <p class="comment-username">Lena</p>
-               <p class="comment-date">Грудень, 2021</p>
-             </div>
+               <div class="comment swiper-slide">
+                  <p class="comment-text">Красивий вид з вікна. Затишно, як вдома, чисто, метро поруч. Все було 🙂
+                  </p>
+                  <p class="comment-username">Оксана</p>
+                  <p class="comment-date">Лютий, 2023</p>
+               </div>
 
-             <div class="comment">
-               <p class="comment-text">Красивий вид з вікна. Затишно, як вдома, чисто, метро поруч. Все було 🙂
-               </p>
-               <p class="comment-username">Оксана</p>
-               <p class="comment-date">Лютий, 2023</p>
-             </div>
+               <div class="comment swiper-slide">
+                  <p class="comment-text">Дуже приємна адміністратор. Співвідношення ціна-якість відповідає дійсності.
+                  </p>
+                  <p class="comment-username">Галина</p>
+                  <p class="comment-date">Лютий, 2023</p>
+               </div>
 
-             <div class="comment">
-               <p class="comment-text">Дуже приємна адміністратор. Співвідношення ціна-якість відповідає дійсності.
-               </p>
-               <p class="comment-username">Галина</p>
-               <p class="comment-date">Лютий, 2023</p>
-             </div>
+               <div class="comment swiper-slide">
+                  <p class="comment-text">Все сподобалося, рекомендую. Краще, ніж на фото та мої очікування, відчула себе як вдома. Затишно, чисто, хороше розташування.
+                  </p>
+                  <p class="comment-username">Діана</p>
+                  <p class="comment-date">Березень, 2023</p>
+               </div>
+            </div>
 
-             <div class="comment">
-               <p class="comment-text">Все сподобалося, рекомендую. Краще, ніж на фото та мої очікування, відчула себе як вдома. Затишно, чисто, хороше розташування.
-               </p>
-               <p class="comment-username">Діана</p>
-               <p class="comment-date">Березень, 2023</p>
-             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
          </div>
 
          <div class="cli-background" style="--background-color: rgb(46, 196, 182);--background-image: none;" data-fill="true" data-type="background" data-image="true" data-video="true" data-design-type="background" data-system-sizes="666,666px,1818px,cover;767,767px,2071px,cover;1023,1023px,952px,cover;1199,1199px,1025px,cover;1920,1920px,622px,cover"></div>
       </section>
       <!-- COMMENTS SECTION -->
+
 
    <section class="cli-block cli-advantages cli-block--default">
       <p class="map-title">Наша локація на карті</p>
@@ -796,3 +804,38 @@
     var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(gcw, sn);
    })(document, window, 'script');
  </script> 
+
+<script  type="text/javascript">
+   const swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      centeredSlidesBounds: true,
+      loop: true,
+      autoplay: {
+         delay: 5000,
+         disableOnInteraction: false,
+      },
+
+      navigation: {
+         nextEl: '.swiper-button-next',
+         prevEl: '.swiper-button-prev',
+      },
+
+      breakpointsBase: "container",
+      slidesPerView: 3,
+      spaceBetween: 30,
+      breakpoints: {
+         320: { // Для экранов шириной 320px и меньше
+             slidesPerView: 1,
+             spaceBetween: 10,
+         },
+         768: { // Для экранов шириной 768px и больше
+             slidesPerView: 2,
+             spaceBetween: 20,
+         },
+         1024: { // Для экранов шириной 1024px и больше
+             slidesPerView: 3,
+             spaceBetween: 30,
+         },
+     }
+   });
+</script>
