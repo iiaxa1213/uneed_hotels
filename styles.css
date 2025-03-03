@@ -197,6 +197,10 @@
     text-align: center;
 }
 
+.block-1-title-company span {
+    color: #FFC55C;
+}
+
 .block-1-title-company img {
     --size: calc(1.25 * max(3vw, 3rem));
     padding: calc(.125 * var(--size));
