@@ -842,6 +842,8 @@
     font-size: 30px;
     cursor: pointer;
     color: #000;
+    margin-bottom: 15px;
+    z-index: 999999;
 }
 
 .close:hover {

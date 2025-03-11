@@ -149,6 +149,26 @@
       height="0" width="0" style="display:none;visibility:hidden"></iframe>
    </noscript>
    <!-- End Google Tag Manager -->
+
+
+   <div id="popup" class="popup">
+      <div class="popup-content">
+         <span id="closePopup" class="close">&times;</span>
+         <div>
+            <!-- EasyMS reservation module -->
+            <div id="easyms-reservation-module">
+               <script type="text/props">
+               {
+                  "moduleKey": "845ed698-c144-4fa4-a4d8-3658163583cb"
+               }
+               </script>
+            </div>
+            <script async src="https://my.easyms.co/reservation-module/bundle.js"></script>
+            <!-- END of EasyMS reservation module -->
+         </div>
+      </div>
+   </div>
+
       
    <header class="header-container">
       <div class="header">
@@ -785,16 +805,31 @@
    }
 </script>
 
+
 <script>
    // Popup script
    function openPopUp() {
-      var binotelButton = document.getElementById('bingc-phone-button'); // Ищем кнопку по ID
-      if (binotelButton) {
-        binotelButton.click();
-      } else {
-        console.error("Binotel button not found");
-      }
+      const popup = document.getElementById('popup');
+      popup.style.display = 'flex';
    }
+
+   document.addEventListener('DOMContentLoaded', function() {
+      const popup = document.getElementById('popup');
+      const openPopupButton = document.getElementById('openPopup');
+      const closePopupButton = document.getElementById('closePopup');
+  
+      // Закрытие popup
+      closePopupButton.addEventListener('click', function() {
+          popup.style.display = 'none';
+      });
+  
+      // Закрытие popup при клике вне его области
+      window.addEventListener('click', function(event) {
+          if (event.target === popup) {
+              popup.style.display = 'none';
+          }
+      });
+  });
 </script>
 
 
