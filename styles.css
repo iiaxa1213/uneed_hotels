@@ -624,7 +624,7 @@
     padding-bottom: 5rem;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 950px) {
     .room-container {
         flex-flow: column nowrap;
         gap: 2rem;
@@ -633,18 +633,18 @@
     .room-description {
         width: 50vw;
     }
+
+    .room {
+        width: 80vw !important;
+    }
 }
 
 .room {
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
-
-    width: max(50vw, 300px);
-    /* width: max(40vw, 300px); */
-    /* width: clamp(200px, 30vw, 500px); */
+    width: 50vw;
     height: auto;
-    
 }
 
 .room-description {
@@ -1258,10 +1258,18 @@
     margin-right: 20px;
   }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
     .custom-swiper-button-prev,
     .custom-swiper-button-next {
         width: 32px;
         height: 32px;
     }   
+  
+    .custom-swiper-button-prev {
+        margin-left: 10px;
+    }
+
+    .custom-swiper-button-next {
+        margin-right: 10px;
+    }
 }
