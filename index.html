@@ -309,7 +309,7 @@
 
          <!-- ROOM-1 START -->
          <div class="room-container">
-            <div class="room" roomIndex=0>
+            <div class="room">
             <div class="swiper mySwiper2">
                <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -447,69 +447,76 @@
 
          <!-- ROOM-2 START -->
          <div class="room-container">
-            <div class="room" roomIndex=1>
-               <div class="slideshow-container">
-
-                  <div class="mySlides fade">
-                     <div class="numbertext">1 / 7</div>
-                     <img src="hotelrooms/1/general.jpg">
-                     <!-- <div class="text">Caption Text</div> -->
+            <div class="room">
+            <div class="swiper mySwiper4">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/general.jpg" />
                   </div>
-                  
-                  <div class="mySlides fade">
-                     <div class="numbertext">2 / 7</div>
-                     <img src="hotelrooms/1/general-2.jpg">
-                     <!-- <div class="text">Caption Two</div> -->
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/general-2.jpg" />
                   </div>
-                  
-                  <div class="mySlides fade">
-                     <div class="numbertext">3 / 7</div>
-                     <img src="hotelrooms/1/bed.jpg">
-                     <!-- <div class="text">Caption Three</div> -->
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/bed.jpg" />
                   </div>
-                  
-                  <div class="mySlides fade">
-                     <div class="numbertext">4 / 7</div>
-                     <img src="hotelrooms/1/bathroom.jpg">
-                     <!-- <div class="text">Caption Three</div> -->
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/bathroom.jpg" />
                   </div>
-                  
-                  <div class="mySlides fade">
-                     <div class="numbertext">5 / 7</div>
-                     <img src="hotelrooms/1/bathroom-2.jpg">
-                     <!-- <div class="text">Caption Three</div> -->
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/bathroom-2.jpg" />
                   </div>
-
-                  <div class="mySlides fade">
-                     <div class="numbertext">6 / 7</div>
-                     <img src="hotelrooms/1/facilities.jpg">
-                     <!-- <div class="text">Caption Three</div> -->
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/facilities.jpg" />
                   </div>
-                  
-                  <div class="mySlides fade">
-                     <div class="numbertext">7 / 7</div>
-                     <img src="hotelrooms/1/fridge.jpg">
-                     <!-- <div class="text">Caption Three</div> -->
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/fridge.jpg" />
                   </div>
-                  
-                  <a class="prev" onclick="prevSlide(this)">❮</a>
-                  <a class="next" onclick="nextSlide(this)">❯</a>
                </div>
-               
-               <div style="text-align:center">
-                  <span class="dot" onclick="setSlide(this, 1)"></span> 
-                  <span class="dot" onclick="setSlide(this, 2)"></span> 
-                  <span class="dot" onclick="setSlide(this, 3)"></span>
-                  <span class="dot" onclick="setSlide(this, 4)"></span> 
-                  <span class="dot" onclick="setSlide(this, 5)"></span> 
-                  <span class="dot" onclick="setSlide(this, 6)"></span> 
-                  <span class="dot" onclick="setSlide(this, 7)"></span> 
+               <!-- Кастомные стрелки -->
+               <div class="custom-swiper-nav">
+                  <div class="custom-swiper-button-prev">
+                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                  </div>
+                  <div class="custom-swiper-button-next">
+                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                  </div>
                </div>
             </div>
+            
+         <div thumbsSlider="" class="swiper mySwiper3">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                  <img src="hotelrooms/1/general.jpg" />
+               </div>
+               <div class="swiper-slide">
+                  <img src="hotelrooms/1/general-2.jpg" />
+               </div>
+               <div class="swiper-slide">
+                  <img src="hotelrooms/1/bed.jpg" />
+               </div>
+               <div class="swiper-slide">
+                  <img src="hotelrooms/1/bathroom.jpg" />
+               </div>
+               <div class="swiper-slide">
+                  <img src="hotelrooms/1/bathroom-2.jpg" />
+               </div>
+               <div class="swiper-slide">
+                  <img src="hotelrooms/1/facilities.jpg" />
+               </div>
+               <div class="swiper-slide">
+                  <img src="hotelrooms/1/fridge.jpg" />
+               </div>
+            </div>
+         </div>
+      </div>
 
             <div class="room-description text-regular-shadow">
                <p class="room-description-title">
-                  Чотиримісний номер з двоспальним ліжком
+                  Двомісний номер з двоспальним ліжком
                </p>
                <p class="room-description-price">
                   <span>1999</span> грн / доба
@@ -840,6 +847,33 @@
 
    });
    var swiper2 = new Swiper(".mySwiper2", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+         nextEl: '.custom-swiper-button-next',
+         prevEl: '.custom-swiper-button-prev',
+      },
+      thumbs: {
+         swiper: swiper1,
+      },
+      autoplay: {
+         delay: 5000,
+         pauseOnMouseEnter: true,
+         stopOnLastSlide: true
+      }
+   });
+
+   var swiper1 = new Swiper(".mySwiper3", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 5,
+      freeMode: {
+         enabled: false,
+         sticky: true,
+      },
+
+   });
+   var swiper2 = new Swiper(".mySwiper4", {
       loop: true,
       spaceBetween: 10,
       navigation: {
