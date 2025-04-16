@@ -310,63 +310,89 @@
          <!-- ROOM-1 START -->
          <div class="room-container">
             <div class="room" roomIndex=0>
-               <div class="slideshow-container">
-
-                  <div class="mySlides fade">
-                     <div class="numbertext">1 / 7</div>
-                     <img src="hotelrooms/1/general.jpg">
-                     <!-- <div class="text">Caption Text</div> -->
-                  </div>
-                  
-                  <div class="mySlides fade">
-                     <div class="numbertext">2 / 7</div>
+                  <div
+      style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+      class="swiper mySwiper2"
+    >
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+            </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+         </div>
+         <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+            </div>
+            <div class="swiper-slide">
+               <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+            </div>
+            </div>
+         </div>
+                     <!-- <img src="hotelrooms/1/general.jpg">
                      <img src="hotelrooms/1/general-2.jpg">
-                     <!-- <div class="text">Caption Two</div> -->
-                  </div>
-                  
-                  <div class="mySlides fade">
-                     <div class="numbertext">3 / 7</div>
                      <img src="hotelrooms/1/bed.jpg">
-                     <!-- <div class="text">Caption Three</div> -->
-                  </div>
-                  
-                  <div class="mySlides fade">
-                     <div class="numbertext">4 / 7</div>
                      <img src="hotelrooms/1/bathroom.jpg">
-                     <!-- <div class="text">Caption Three</div> -->
-                  </div>
-                  
-                  <div class="mySlides fade">
-                     <div class="numbertext">5 / 7</div>
                      <img src="hotelrooms/1/bathroom-2.jpg">
-                     <!-- <div class="text">Caption Three</div> -->
-                  </div>
-
-                  <div class="mySlides fade">
-                     <div class="numbertext">6 / 7</div>
-                     <img src="hotelrooms/1/facilities.jpg">
-                     <!-- <div class="text">Caption Three</div> -->
-                  </div>
-                  
-                  <div class="mySlides fade">
-                     <div class="numbertext">7 / 7</div>
-                     <img src="hotelrooms/1/fridge.jpg">
-                     <!-- <div class="text">Caption Three</div> -->
-                  </div>
+                     <img src="hotelrooms/1/fridge.jpg"> -->
                   
                   <a class="prev" onclick="prevSlide(this)">❮</a>
                   <a class="next" onclick="nextSlide(this)">❯</a>
-               </div>
-               
-               <div style="text-align:center">
-                  <span class="dot" onclick="setSlide(this, 1)"></span> 
-                  <span class="dot" onclick="setSlide(this, 2)"></span> 
-                  <span class="dot" onclick="setSlide(this, 3)"></span>
-                  <span class="dot" onclick="setSlide(this, 4)"></span> 
-                  <span class="dot" onclick="setSlide(this, 5)"></span> 
-                  <span class="dot" onclick="setSlide(this, 6)"></span> 
-                  <span class="dot" onclick="setSlide(this, 7)"></span> 
-               </div>
+            </div>
             </div>
 
             <div class="room-description text-regular-shadow">
@@ -668,7 +694,7 @@
       <section class="cli-block cli-block--default comments-container">
          <p class="comment-title">Відгуки наших клієнтів</p>
          
-         <div class="comments swiper">
+         <div class="comments swiper swiperReview">
             <div class="swiper-wrapper">
                <div class="comment swiper-slide">
                   <p class="comment-text">Добрий день, дуже задоволені. Увага, турбота, чистота. На 💯 балів.
@@ -843,7 +869,7 @@
  </script> 
 
 <script  type="text/javascript">
-   const swiper = new Swiper('.swiper', {
+   const swiper = new Swiper('.swiperReview', {
       direction: 'horizontal',
       centeredSlidesBounds: true,
       loop: true,
@@ -876,3 +902,25 @@
      }
    });
 </script>
+
+<script>
+   var swiper1 = new Swiper(".mySwiper", {
+     spaceBetween: 10,
+     slidesPerView: 5,
+     freeMode: {
+       enabled: false,
+       sticky: true,
+     },
+   });
+   var swiper2 = new Swiper(".mySwiper2", {
+     spaceBetween: 10,
+     effect: "fade",
+     navigation: {
+       nextEl: ".swiper-button-next",
+       prevEl: ".swiper-button-prev",
+     },
+     thumbs: {
+       swiper: swiper1,
+     },
+   });
+ </script>
