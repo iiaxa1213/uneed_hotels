@@ -310,36 +310,45 @@
          <!-- ROOM-1 START -->
          <div class="room-container">
             <div class="room" roomIndex=0>
-                  <div
-      style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-      class="swiper mySwiper2"
-    >
-            <div class="swiper-wrapper">
-               <div class="swiper-slide">
-                  <img src="hotelrooms/1/general.jpg" />
+            <div class="swiper mySwiper2">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/general.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/general-2.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/bed.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/bathroom.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/bathroom-2.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/facilities.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="hotelrooms/1/fridge.jpg" />
+                  </div>
                </div>
-               <div class="swiper-slide">
-                  <img src="hotelrooms/1/general-2.jpg" />
-               </div>
-               <div class="swiper-slide">
-                  <img src="hotelrooms/1/bed.jpg" />
-               </div>
-               <div class="swiper-slide">
-                  <img src="hotelrooms/1/bathroom.jpg" />
-               </div>
-               <div class="swiper-slide">
-                  <img src="hotelrooms/1/bathroom-2.jpg" />
-               </div>
-               <div class="swiper-slide">
-                  <img src="hotelrooms/1/facilities.jpg" />
-               </div>
-               <div class="swiper-slide">
-                  <img src="hotelrooms/1/fridge.jpg" />
+               <!-- Кастомные стрелки -->
+               <div class="custom-swiper-nav">
+                  <div class="custom-swiper-button-prev">
+                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                  </div>
+                  <div class="custom-swiper-button-next">
+                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                  </div>
                </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-         </div>
+            
          <div thumbsSlider="" class="swiper mySwiper">
             <div class="swiper-wrapper">
                <div class="swiper-slide">
@@ -365,11 +374,7 @@
                </div>
             </div>
          </div>
-                  
-                  <a class="prev" onclick="prevSlide(this)">❮</a>
-                  <a class="next" onclick="nextSlide(this)">❯</a>
-            </div>
-            </div>
+      </div>
 
             <div class="room-description text-regular-shadow">
                <p class="room-description-title">
@@ -753,62 +758,6 @@
 </html>
 
 <script>
-   let rooms = document.getElementsByClassName("room");
-   for (var i = 0; i < rooms.length; i++) {
-      rooms[i].setAttribute("slideIndex", 1);
-      _currentSlideByIndex(i);
-   }
-
-   function _getRoomIndex(el) {
-      return el.parentElement.parentElement.getAttribute("roomIndex");
-   }
-   
-   function nextSlide(el) {
-      showSlides(_getRoomIndex(el), 1);
-   }
-   
-   function prevSlide(el) {
-      showSlides(_getRoomIndex(el), -1);
-   }
-   
-   function currentSlide(el) {
-      showSlides(_getRoomIndex(el), 0);
-   }
-
-   function _currentSlideByIndex(i) {
-      showSlides(i, 0);
-   }
-
-   function setSlide(el, n) {
-      let roomIndex = _getRoomIndex(el);
-      let room = rooms[roomIndex];
-      let slideIndex = room.getAttribute("slideIndex");
-      showSlides(roomIndex, n - slideIndex);
-   }
-   
-   function showSlides(roomIndex, n) {
-      let room = rooms[roomIndex];
-      let slideIndex = Number(n) + Number(room.getAttribute("slideIndex"));
-      let slides = room.getElementsByClassName("mySlides");
-      let dots = room.getElementsByClassName("dot");
-
-      let i;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      if (slideIndex < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-         slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-         dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-      room.setAttribute("slideIndex", slideIndex);
-   }
-</script>
-
-
-<script>
    // Popup script
    function openPopUp() {
       const popup = document.getElementById('popup');
@@ -881,21 +830,29 @@
 
 <script>
    var swiper1 = new Swiper(".mySwiper", {
-     spaceBetween: 10,
-     slidesPerView: 5,
-     freeMode: {
-       enabled: false,
-       sticky: true,
-     },
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 5,
+      freeMode: {
+         enabled: false,
+         sticky: true,
+      },
+
    });
    var swiper2 = new Swiper(".mySwiper2", {
-     spaceBetween: 10,
-     navigation: {
-       nextEl: ".swiper-button-next",
-       prevEl: ".swiper-button-prev",
-     },
-     thumbs: {
-       swiper: swiper1,
-     },
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+         nextEl: '.custom-swiper-button-next',
+         prevEl: '.custom-swiper-button-prev',
+      },
+      thumbs: {
+         swiper: swiper1,
+      },
+      autoplay: {
+         delay: 3000,
+         pauseOnMouseEnter: true,
+         stopOnLastSlide: true
+      }
    });
  </script>
