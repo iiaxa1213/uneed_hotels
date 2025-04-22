@@ -6,12 +6,14 @@
     --header-height: 10vh;
     --font-family: "Noto Sans", serif;
     --timberwolf: #CEC2B8ff;
-    --auburn: #A42F36ff;
+    /* --auburn: #A42F36ff; */
+    --auburn: rgb(202, 47, 57);
     --umber: #6E594Bff;
     --chamoisee: #9E7D63ff;
     --champagne-pink: #E7DAD0ff;
     -webkit-box-sizing:content-box !important;
     box-sizing: content-box !important;
+    --orange: rgb(254 201 2);
 }
 
 /* * {
@@ -27,10 +29,10 @@
 }
 
 .background-container-1 {
-    background-color: var(--umber);
+    background-color: black;
 }
 .background-container-2 {
-    background-color: var(--champagne-pink);
+    background-color: black;
 }
 
 
@@ -47,7 +49,8 @@
     /* width: 100%; */
     overflow: auto;
     height: var(--header-height);
-    background-color: rgba(255, 255, 255, 0.85);
+    /* background-color: rgba(255, 255, 255, 0.85); */
+    background-color: black;
     
     display: flex;
     flex-flow: row nowrap;
@@ -68,6 +71,7 @@
 }
 
 .header p {
+    color: white;
     font-size: calc(var(--header-height) / 2.5);
     font-weight: 700;
     font-family: var(--font-family);
@@ -100,7 +104,7 @@
 
 .block-title-container .maintitle {
     font-size: 2.5rem;
-    color: black;
+    color: white;
     font-weight: 700;
     font-family: var(--font-family);
     padding-bottom: .5rem;
@@ -108,7 +112,7 @@
 
 .block-title-container .subtitle {
     font-size: 1rem;
-    color: rgb(85, 85, 85);
+    color: white;
     font-weight: 400;
     font-family: var(--font-family);
     padding-bottom: .5rem;
@@ -125,10 +129,10 @@
     background: transparent;
     /* border: none; */
     border: 1px solid #000;
-    border-color: black;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    padding: 1em 1.5em;
-    color: #000000;
+    border-color: var(--orange);
+    box-shadow: rgba(194, 194, 194, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: .75em 1.5em;
+    color: white;
     text-transform: uppercase;
     font-family: var(--font-family);
     font-weight: 500;
@@ -149,12 +153,12 @@
 }
   
 .btn:hover {
-    color: #ffffff;
+    color: black;
     transition-delay: 0.5s;
 }
   
 .btn:hover::before {
-    background-color: var(--chamoisee);
+    background-color: var(--orange);
     animation: expandWidth .5s ease;
 }
 
@@ -174,7 +178,7 @@
     bottom: 0;
     height: 0;
     width: 100%;
-    background-color: var(--chamoisee);
+    background-color: var(--orange);
     transition: 0.4s ease;
     z-index: -1;
 }
@@ -182,7 +186,7 @@
 .btn:hover::after {
     height: 100%;
     transition-delay: 0.4s;
-    color: var(--auburn);
+    color: var(--orange);
 }  
 
 
@@ -665,7 +669,7 @@
 
 .room-description-title {
     font-family: var(--font-family);
-    color: rgb(59, 59, 59);
+    color: white;
     font-size: 1.25rem;
     font-weight: 600;
     text-align: center;
@@ -673,7 +677,7 @@
 
 .room-description-price {
     font-family: var(--font-family);
-    color: var(--umber);
+    color: white;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
@@ -710,13 +714,15 @@
     /* width: 2vw; */
     width: 2rem;
     height: auto;
-    fill: black;
+    fill: white;
+    color: var(--orange);
 }
 
 .room-icon-text {
     font-size: 1rem;
     font-family: var(--font-family);
-    font-weight: 300;
+    font-weight: 400;
+    color: white;
 }
 
 
@@ -929,7 +935,7 @@
 .comments-container {
     width: 100%;
     height: 100%;
-    background-color: #f8d5a7;
+    background-color: black;
 
     padding: 4rem 0 8rem 0;
 }
@@ -949,7 +955,7 @@
 
 .comment {
     /* position: relative; */
-    background-color: #ff9a5b;
+    background-color: white;
     padding: 1em;
     /* z-index: 5; */
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
@@ -962,7 +968,7 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    color: #122620;
+    color: black;
     text-align: center;
     text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     gap: 0.5rem;
@@ -970,7 +976,7 @@
   
 .comment-username {
     /* color: #c6e1ed; */
-    color: #262322;
+    color: rgb(75, 75, 75);
     font-size: 0.85em;
     font-weight: 600;
 }
@@ -978,14 +984,14 @@
 .comment-text {
     margin: 0 10px 0 0;
     white-space: pre-line;
-    color: white;
+    color: black;
     font-weight: 400;
     line-height: 1.5;
     margin-bottom: 4px;
 }
   
 .comment-date {
-    color: #262322;
+    color: rgb(75, 75, 75);
     font-size: 0.85em;
     font-weight: 500;
 }
@@ -1009,7 +1015,7 @@
     font-family: var(--font-family);
     font-weight: 600;
     text-align: center;
-    color: black;
+    color: white;
     padding: 3rem 0;
 }
 
@@ -1114,7 +1120,7 @@
 }
 
 .footer-phone {
-    color: #FFC55C;
+    color: var(--orange);
     font-size: 1rem;
     font-weight: 500;
 }
@@ -1135,7 +1141,6 @@
 .footer-logo {
     width: max(200px, 25vw);
     height: auto;
-    background-color: rgb(255, 255, 255);
     /* filter: invert(100%); */
 }
 
@@ -1156,7 +1161,7 @@
 
 /* Overwrite */
 .cli-iconed-card__icon svg {
-    fill: var(--auburn) !important;
+    fill: black !important;
 }
 
 
