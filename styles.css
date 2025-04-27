@@ -1279,3 +1279,8 @@
         margin-right: 10px;
     }
 }
+
+
+.swiper-slide-thumb-active {
+    border: 3px ridge red;
+}
