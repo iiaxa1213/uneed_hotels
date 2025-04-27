@@ -1284,3 +1284,10 @@
 .swiper-slide-thumb-active {
     border: 3px ridge red;
 }
+
+
+@media (max-width: 660px) {
+    .only-pc {
+        display: none;
+    }
+}
