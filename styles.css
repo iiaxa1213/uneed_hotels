@@ -1290,4 +1290,9 @@
     .only-pc {
         display: none;
     }
+    .block-1-img {
+        width: 100vw !important;
+        height: auto;
+        /* margin-top: 5%; */
+    }
 }
